@@ -20,6 +20,19 @@ attr_reader :items
       end
     end
 
+    def total_price
+        total = items.reduce(0){|sum, item| sum + item.price }
+        total = total *0.9 if super_good_day?
+        total
+    end
+
+
+
+    private
+
+    def super_good_day?
+        Time.now.day == 10 && Time.now.month == 2
+    end
   
 end
 

@@ -22,6 +22,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'hirb-unicode', '~> 0.0.5'
   gem 'faker', '~> 2.1', '>= 2.1.2'
+  gem  'timecop'
 end
 
 group :development do
